@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Final Project</title>
+		<link rel="stylesheet" href="styles/main.css" type="text/css">
+	</head>
+	<body>
+
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="gallery.html">Gallery</a></li>
+		  <li><a href="resume.html">Resume</a></li>
+		  <li><a class="active" href="airsoft.html">Airsoft</a></li>
+		  <li><a href="contact.html">Contact</a></li>
+		</ul>
+
+		<div class="maindiv">
+			<h2 class="w3-center">Airsoft Action</h2>
+
+			<div class="w3-content w3-section" style="max-width:500px">
+			  <img class="mySlides" src="images/Airsoft_squad.jpg" style="width:100%" alt="slide 1">
+			  <img class="mySlides" src="images/airsoft_1.jpg" style="width:100%" alt="slide 2">
+			  <img class="mySlides" src="images/airsoft_2.jpg" style="width:100%" alt="slide 3">
+			  <img class="mySlides" src="images/airsoft_3.jpg" style="width:100%" alt="slide 4">
+			</div>
+
+			<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}
+			  x[myIndex-1].style.display = "block";
+			  setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+			</script>
+
+		</div>
+
+	</body>
+</html>
+
+
+
